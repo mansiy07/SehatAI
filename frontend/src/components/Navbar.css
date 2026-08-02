@@ -1,0 +1,203 @@
+/* ==========================================
+            NAVBAR
+========================================== */
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 60px;
+
+    background: rgba(255,255,255,0.75);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow: 0 4px 18px rgba(0,0,0,.08);
+
+    transition: all .35s ease;
+}
+
+/* ==========================================
+        NAVBAR AFTER SCROLL
+========================================== */
+
+.navbar.active{
+
+    padding: 14px 60px;
+
+    background: rgba(255,255,255,.95);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+            LOGO
+========================================== */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+.logo span{
+
+    font-size:34px;
+
+}
+
+.logo h2{
+
+    font-size:32px;
+    color:#0f766e;
+    font-weight:700;
+
+}
+
+/* ==========================================
+            NAV LINKS
+========================================== */
+
+.navbar ul{
+
+    display:flex;
+    list-style:none;
+    gap:40px;
+
+}
+
+.navbar ul li{
+
+    position:relative;
+
+    cursor:pointer;
+
+    font-size:18px;
+    font-weight:600;
+
+    color:#173042;
+
+    transition:.3s;
+
+}
+
+/* Underline Animation */
+
+.navbar ul li::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0%;
+    height:3px;
+
+    background:#0f9d9d;
+
+    border-radius:30px;
+
+    transition:.35s;
+
+}
+
+.navbar ul li:hover{
+
+    color:#0f9d9d;
+
+}
+
+.navbar ul li:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================================
+            LOGIN BUTTON
+========================================== */
+
+.navbar button{
+
+    padding:12px 28px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#0f9d9d;
+
+    color:white;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.navbar button:hover{
+
+    background:#087d7d;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(15,157,154,.35);
+
+}
+
+/* ==========================================
+            TABLET
+========================================== */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        padding:18px 25px;
+
+    }
+
+    .navbar ul{
+
+        gap:20px;
+
+    }
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .navbar ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+}

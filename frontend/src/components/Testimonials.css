@@ -1,0 +1,126 @@
+/* =======================================
+   TESTIMONIAL SECTION
+======================================= */
+
+.testimonials{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:100px auto;
+
+    text-align:center;
+
+}
+
+
+/* =======================================
+   HEADING
+======================================= */
+
+.testimonials h2{
+
+    font-size:48px;
+
+    color:#173042;
+
+    margin-bottom:60px;
+
+}
+
+
+/* =======================================
+   CARDS CONTAINER
+======================================= */
+
+.testimonial-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+
+/* =======================================
+   SINGLE CARD
+======================================= */
+
+.testimonial-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:0.3s;
+
+}
+
+
+/* Hover Effect */
+
+.testimonial-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+/* =======================================
+   STAR ICONS
+======================================= */
+
+.stars{
+
+    color:#FFD700;
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+}
+
+
+/* =======================================
+   REVIEW TEXT
+======================================= */
+
+.testimonial-card p{
+
+    color:#555;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+
+/* =======================================
+   USER NAME
+======================================= */
+
+.testimonial-card h3{
+
+    color:#173042;
+
+    margin-bottom:8px;
+
+}
+
+
+/* =======================================
+   USER LOCATION
+======================================= */
+
+.testimonial-card span{
+
+    color:#0f9d9d;
+
+}
