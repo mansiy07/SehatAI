@@ -1,13 +1,11 @@
 // ==========================================
 // Footer Component
-// Purpose:
-// Show Website Information & Quick Links
 // ==========================================
 
-// Import CSS
 import "./Footer.css";
 
-// Import Icons
+import { Link } from "react-router-dom";
+
 import {
   FaFacebook,
   FaInstagram,
@@ -15,59 +13,75 @@ import {
   FaGithub,
 } from "react-icons/fa";
 
-// Footer Component
+import { motion } from "framer-motion";
+
 function Footer() {
 
   return (
 
-    // Main Footer
     <footer className="footer">
 
-      {/* Footer Container */}
+      <div className="footer-top"></div>
+
       <div className="footer-container">
 
-        {/* =========================
-            Left Section
-        ========================== */}
+        {/* Brand */}
 
-        <div className="footer-box">
+        <motion.div
+          className="footer-box"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: .6 }}
+          viewport={{ once: true }}
+        >
 
-          <h2>SehatAI</h2>
+          <h2>🏥 SehatAI</h2>
 
           <p>
             AI Powered Smart Rural Health Assistant
-            helping people with healthcare support.
+            helping people with healthcare support,
+            symptom analysis and nearby hospitals.
           </p>
 
-        </div>
+        </motion.div>
 
-        {/* =========================
-            Quick Links
-        ========================== */}
+        {/* Quick Links */}
 
-        <div className="footer-box">
+        <motion.div
+          className="footer-box"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: .6, delay: .15 }}
+          viewport={{ once: true }}
+        >
 
           <h3>Quick Links</h3>
 
           <ul>
 
-            <li>Home</li>
+            <li><Link to="/">Home</Link></li>
 
-            <li>Services</li>
+            <li><a href="#features">Features</a></li>
 
-            <li>About</li>
+            <li><a href="#services">Services</a></li>
 
-            <li>Contact</li>
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#contact">Contact</a></li>
 
           </ul>
 
-        </div>
+        </motion.div>
 
-        {/* =========================
-            Services
-        ========================== */}
+        {/* Services */}
 
-        <div className="footer-box">
+        <motion.div
+          className="footer-box"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: .6, delay: .3 }}
+          viewport={{ once: true }}
+        >
 
           <h3>Services</h3>
 
@@ -79,51 +93,51 @@ function Footer() {
 
             <li>Nearby Hospital</li>
 
+            <li>Health Records</li>
+
           </ul>
 
-        </div>
+        </motion.div>
 
-        {/* =========================
-            Contact
-        ========================== */}
+        {/* Contact */}
 
-        <div className="footer-box">
+        <motion.div
+          className="footer-box"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: .6, delay: .45 }}
+          viewport={{ once: true }}
+        >
 
           <h3>Contact</h3>
 
-          <p>Email : support@sehatai.com</p>
+          <p>📧 support@sehatai.com</p>
 
-          <p>Phone : +91 9876543210</p>
+          <p>📞 +91 9876543210</p>
 
-          <p>India</p>
+          <p>📍 Greater Noida, India</p>
 
-        </div>
+        </motion.div>
 
       </div>
 
-      {/* =========================
-          Social Icons
-      ========================== */}
+      {/* Social */}
 
       <div className="social-icons">
 
-        <FaFacebook />
+        <a href="#"><FaFacebook /></a>
 
-        <FaInstagram />
+        <a href="#"><FaInstagram /></a>
 
-        <FaLinkedin />
+        <a href="#"><FaLinkedin /></a>
 
-        <FaGithub />
+        <a href="#"><FaGithub /></a>
 
       </div>
 
-      {/* =========================
-          Copyright
-      ========================== */}
-
       <p className="copyright">
 
-        © 2026 SehatAI | All Rights Reserved
+        © 2026 SehatAI • Built with ❤️ using React & Spring Boot
 
       </p>
 
@@ -133,5 +147,4 @@ function Footer() {
 
 }
 
-// Export Component
 export default Footer;

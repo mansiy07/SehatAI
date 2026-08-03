@@ -2,13 +2,10 @@
 // Testimonials Section
 // =======================================
 
-// Import CSS
 import "./Testimonials.css";
 
-// Import Star Icon
 import { FaStar } from "react-icons/fa";
 
-// Import Framer Motion
 import { motion } from "framer-motion";
 
 function Testimonials() {
@@ -30,6 +27,16 @@ function Testimonials() {
         What Our Users Say
       </motion.h2>
 
+      <motion.p
+        className="testimonial-subtitle"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: .2 }}
+        viewport={{ once: true }}
+      >
+        Thousands of users trust SehatAI for smarter and faster healthcare support.
+      </motion.p>
+
       {/* ===========================
               Cards
       =========================== */}
@@ -44,6 +51,7 @@ function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: .7 }}
           viewport={{ once: true }}
+          whileHover={{ y: -12, scale: 1.03 }}
         >
 
           <div className="stars">
@@ -74,6 +82,7 @@ function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: .7, delay: .2 }}
           viewport={{ once: true }}
+          whileHover={{ y: -12, scale: 1.03 }}
         >
 
           <div className="stars">
@@ -104,6 +113,7 @@ function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: .7, delay: .4 }}
           viewport={{ once: true }}
+          whileHover={{ y: -12, scale: 1.03 }}
         >
 
           <div className="stars">
@@ -131,6 +141,7 @@ function Testimonials() {
     </section>
 
   );
+
 }
 
 export default Testimonials;

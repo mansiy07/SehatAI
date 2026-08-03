@@ -1,0 +1,315 @@
+/* ==========================================
+            CONTACT SECTION
+========================================== */
+
+.contact{
+
+    width:90%;
+
+    max-width:1250px;
+
+    margin:140px auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+
+/* ==========================================
+            LEFT
+========================================== */
+
+.contact-left{
+
+    flex:1;
+
+}
+
+.contact-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    background:rgba(20,184,166,.12);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    margin-bottom:22px;
+
+}
+
+.contact-left h2{
+
+    font-size:52px;
+
+    color:var(--text);
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+    font-weight:800;
+
+}
+
+.contact-left p{
+
+    color:var(--text-light);
+
+    font-size:19px;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+}
+
+
+/* ==========================================
+            CONTACT INFO
+========================================== */
+
+.contact-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.contact-info div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    color:var(--text);
+
+    font-size:18px;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.contact-info div:hover{
+
+    color:var(--primary);
+
+}
+
+.contact-icon{
+
+    font-size:24px;
+
+    color:var(--primary);
+
+}
+
+
+/* ==========================================
+            CONTACT LINKS
+========================================== */
+
+.contact-link{
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:.35s;
+
+    word-break:break-word;
+
+}
+
+.contact-link:hover{
+
+    color:var(--primary);
+
+}
+
+body.dark .contact-link{
+
+    color:#ffffff;
+
+}
+
+body.dark .contact-link:hover{
+
+    color:#14b8a6;
+
+}
+
+
+/* ==========================================
+            FORM
+========================================== */
+
+.contact-form{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:40px;
+
+    background:var(--card);
+
+    border-radius:28px;
+
+    border:1px solid rgba(20,184,166,.15);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* ==========================================
+            INPUT
+========================================== */
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    border:2px solid rgba(20,184,166,.12);
+
+    border-radius:16px;
+
+    background:transparent;
+
+    color:var(--text);
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.35s;
+
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+
+    color:var(--text-light);
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(20,184,166,.12);
+
+}
+
+.contact-form textarea{
+
+    resize:none;
+
+}
+
+
+/* ==========================================
+            BUTTON
+========================================== */
+
+.contact-form button{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:var(--gradient);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.contact-form button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(20,184,166,.28);
+
+}
+
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .contact{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:50px;
+
+    }
+
+    .contact-left h2{
+
+        font-size:40px;
+
+    }
+
+    .contact-info div{
+
+        justify-content:center;
+
+    }
+
+    .contact-form{
+
+        width:100%;
+
+    }
+
+}

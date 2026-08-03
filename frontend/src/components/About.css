@@ -1,79 +1,104 @@
 /* ==========================================
-            FEATURES SECTION
+            ABOUT SECTION
 ========================================== */
 
-.features{
+.about{
 
     width:90%;
     max-width:1250px;
 
     margin:120px auto;
 
-    text-align:center;
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
 
 }
 
 
 /* ==========================================
-            HEADING
+            LEFT SIDE
 ========================================== */
 
-.features h2{
+.about-left{
+
+    flex:1;
+
+}
+
+.about-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:rgba(20,184,166,.12);
+
+    color:var(--primary);
+
+    border:1px solid rgba(20,184,166,.20);
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    margin-bottom:22px;
+
+}
+
+.about-left h2{
 
     font-size:52px;
 
     color:var(--text);
 
-    margin-bottom:18px;
+    margin-bottom:25px;
 
-    font-weight:800;
+    line-height:1.2;
 
 }
 
-
-/* ==========================================
-            SUBTITLE
-========================================== */
-
-.feature-subtitle{
+.about-left p{
 
     color:var(--text-light);
 
-    font-size:20px;
+    font-size:18px;
 
-    max-width:680px;
-
-    margin:0 auto 65px;
-
-    line-height:1.8;
+    line-height:1.9;
 
 }
 
 
 /* ==========================================
-        FEATURE CONTAINER
+            RIGHT SIDE
 ========================================== */
 
-.feature-container{
+.about-right{
+
+    flex:1;
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:repeat(2,1fr);
 
-    gap:30px;
+    gap:25px;
 
 }
 
 
 /* ==========================================
-            FEATURE CARD
+            CARD
 ========================================== */
 
-.feature-card{
+.about-card{
 
     background:var(--surface);
 
-    padding:42px 30px;
+    padding:32px;
 
     border-radius:24px;
 
@@ -83,20 +108,18 @@
 
     transition:.35s;
 
-    cursor:pointer;
+    position:relative;
 
     overflow:hidden;
-
-    position:relative;
 
 }
 
 
 /* ==========================================
-        TOP GLOW LINE
+        TOP GRADIENT BAR
 ========================================== */
 
-.feature-card::before{
+.about-card::before{
 
     content:"";
 
@@ -118,8 +141,7 @@
 
 }
 
-
-.feature-card:hover::before{
+.about-card:hover::before{
 
     transform:scaleX(1);
 
@@ -130,13 +152,13 @@
             HOVER
 ========================================== */
 
-.feature-card:hover{
+.about-card:hover{
 
     transform:translateY(-12px);
 
-    box-shadow:0 25px 50px rgba(20,184,166,.22);
-
     border-color:rgba(20,184,166,.35);
+
+    box-shadow:0 25px 50px rgba(20,184,166,.22);
 
 }
 
@@ -145,22 +167,21 @@
             ICON
 ========================================== */
 
-.icon{
+.about-icon{
 
-    font-size:56px;
+    font-size:50px;
 
     color:var(--primary);
 
-    margin-bottom:25px;
+    margin-bottom:20px;
 
     transition:.35s;
 
 }
 
+.about-card:hover .about-icon{
 
-.feature-card:hover .icon{
-
-    transform:scale(1.12) rotate(5deg);
+    transform:scale(1.15) rotate(6deg);
 
 }
 
@@ -169,28 +190,26 @@
             TITLE
 ========================================== */
 
-.feature-card h3{
+.about-card h3{
 
     color:var(--text);
 
-    font-size:25px;
+    margin-bottom:15px;
 
-    margin-bottom:18px;
+    font-size:23px;
 
 }
 
 
 /* ==========================================
-            DESCRIPTION
+            TEXT
 ========================================== */
 
-.feature-card p{
+.about-card p{
 
     color:var(--text-light);
 
     line-height:1.8;
-
-    font-size:16px;
 
 }
 
@@ -199,7 +218,7 @@
             DARK MODE
 ========================================== */
 
-body.dark .feature-card{
+body.dark .about-card{
 
     background:#173042;
 
@@ -207,22 +226,19 @@ body.dark .feature-card{
 
 }
 
-
-body.dark .feature-card:hover{
+body.dark .about-card:hover{
 
     box-shadow:0 25px 50px rgba(0,0,0,.45);
 
 }
 
-
-body.dark .feature-card h3{
+body.dark .about-card h3{
 
     color:#ffffff;
 
 }
 
-
-body.dark .feature-card p{
+body.dark .about-card p{
 
     color:#cbd5e1;
 
@@ -233,17 +249,37 @@ body.dark .feature-card p{
             RESPONSIVE
 ========================================== */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
-    .features h2{
+    .about{
 
-        font-size:38px;
+        flex-direction:column;
+
+        text-align:center;
 
     }
 
-    .feature-subtitle{
+    .about-right{
 
-        font-size:17px;
+        grid-template-columns:1fr;
+
+        width:100%;
+
+    }
+
+    .about-left h2{
+
+        font-size:40px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .about-left h2{
+
+        font-size:34px;
 
     }
 

@@ -1,27 +1,45 @@
 /* ==========================================
-            NAVBAR
+                NAVBAR
 ========================================== */
 
 .navbar{
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position:sticky;
+    top:0;
+    z-index:1000;
 
-    padding: 18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-    background: rgba(255,255,255,0.75);
+    padding:18px 60px;
 
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background:rgba(255,255,255,.65);
 
-    box-shadow: 0 4px 18px rgba(0,0,0,.08);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
 
-    transition: all .35s ease;
+    border-bottom:1px solid rgba(255,255,255,.25);
+
+    box-shadow:var(--shadow);
+
+    transition:all .35s ease;
+
 }
+
+
+/* ==========================================
+            DARK NAVBAR
+========================================== */
+
+body.dark .navbar{
+
+    background:rgba(16,39,59,.75);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
 
 /* ==========================================
         NAVBAR AFTER SCROLL
@@ -29,16 +47,13 @@
 
 .navbar.active{
 
-    padding: 14px 60px;
-
-    background: rgba(255,255,255,.95);
-
-    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    padding:14px 60px;
 
 }
 
+
 /* ==========================================
-            LOGO
+                LOGO
 ========================================== */
 
 .logo{
@@ -46,6 +61,8 @@
     display:flex;
     align-items:center;
     gap:10px;
+
+    text-decoration:none;
 
 }
 
@@ -58,10 +75,13 @@
 .logo h2{
 
     font-size:32px;
-    color:#0f766e;
+
+    color:var(--primary);
+
     font-weight:700;
 
 }
+
 
 /* ==========================================
             NAV LINKS
@@ -84,11 +104,18 @@
     font-size:18px;
     font-weight:600;
 
-    color:#173042;
+}
+
+.navbar ul li a{
+
+    text-decoration:none;
+
+    color:var(--text);
 
     transition:.3s;
 
 }
+
 
 /* Underline Animation */
 
@@ -101,10 +128,11 @@
     left:0;
     bottom:-6px;
 
-    width:0%;
+    width:0;
+
     height:3px;
 
-    background:#0f9d9d;
+    background:var(--gradient);
 
     border-radius:30px;
 
@@ -112,9 +140,9 @@
 
 }
 
-.navbar ul li:hover{
+.navbar ul li:hover a{
 
-    color:#0f9d9d;
+    color:var(--primary);
 
 }
 
@@ -124,18 +152,34 @@
 
 }
 
+
+/* ==========================================
+            NAV ACTIONS
+========================================== */
+
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
 /* ==========================================
             LOGIN BUTTON
 ========================================== */
 
-.navbar button{
+.navbar .nav-actions a button{
 
     padding:12px 28px;
 
     border:none;
-    border-radius:12px;
+    border-radius:14px;
 
-    background:#0f9d9d;
+    background:var(--gradient);
 
     color:white;
 
@@ -144,19 +188,69 @@
 
     cursor:pointer;
 
+    box-shadow:0 10px 25px rgba(20,184,166,.25);
+
     transition:.35s;
 
 }
 
-.navbar button:hover{
-
-    background:#087d7d;
+.navbar .nav-actions a button:hover{
 
     transform:translateY(-4px);
 
-    box-shadow:0 15px 30px rgba(15,157,154,.35);
+    box-shadow:0 18px 40px rgba(20,184,166,.35);
 
 }
+
+
+/* ==========================================
+        THEME TOGGLE BUTTON
+========================================== */
+
+.theme-toggle{
+
+    width:48px;
+
+    height:48px;
+
+    padding:0;
+
+    border:none;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.35s;
+
+}
+
+.theme-toggle:hover{
+
+    transform:rotate(25deg);
+
+    background:var(--gradient);
+
+    color:white;
+
+}
+
 
 /* ==========================================
             TABLET
@@ -178,6 +272,7 @@
 
 }
 
+
 /* ==========================================
             MOBILE
 ========================================== */
@@ -195,6 +290,12 @@
     .navbar ul{
 
         flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .nav-actions{
 
         justify-content:center;
 

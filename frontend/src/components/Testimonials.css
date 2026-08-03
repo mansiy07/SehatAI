@@ -1,37 +1,59 @@
-/* =======================================
-   TESTIMONIAL SECTION
-======================================= */
+/* ==========================================
+            TESTIMONIALS
+========================================== */
 
 .testimonials{
 
     width:90%;
-    max-width:1200px;
 
-    margin:100px auto;
+    max-width:1250px;
+
+    margin:140px auto;
 
     text-align:center;
 
 }
 
 
-/* =======================================
-   HEADING
-======================================= */
+/* ==========================================
+            HEADING
+========================================== */
 
 .testimonials h2{
 
-    font-size:48px;
+    font-size:52px;
 
-    color:#173042;
+    font-weight:800;
 
-    margin-bottom:60px;
+    color:var(--text);
+
+    margin-bottom:18px;
 
 }
 
 
-/* =======================================
-   CARDS CONTAINER
-======================================= */
+/* ==========================================
+            SUBTITLE
+========================================== */
+
+.testimonial-subtitle{
+
+    max-width:720px;
+
+    margin:0 auto 70px;
+
+    color:var(--text-light);
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================
+            CONTAINER
+========================================== */
 
 .testimonial-container{
 
@@ -39,88 +61,173 @@
 
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 
-    gap:30px;
+    gap:35px;
 
 }
 
 
-/* =======================================
-   SINGLE CARD
-======================================= */
+/* ==========================================
+            CARD
+========================================== */
 
 .testimonial-card{
 
-    background:white;
+    position:relative;
 
-    padding:35px;
+    overflow:hidden;
 
-    border-radius:20px;
+    background:var(--card);
 
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    border-radius:26px;
 
-    transition:0.3s;
+    padding:40px 35px;
+
+    border:1px solid rgba(20,184,166,.15);
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
 
 }
 
 
-/* Hover Effect */
+/* TOP LINE */
+
+.testimonial-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:var(--gradient);
+
+    transform:scaleX(0);
+
+    transition:.35s;
+
+}
+
+
+.testimonial-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
 
 .testimonial-card:hover{
 
-    transform:translateY(-10px);
+    transform:translateY(-12px);
+
+    border-color:rgba(20,184,166,.35);
+
+    box-shadow:0 25px 50px rgba(20,184,166,.22);
 
 }
 
 
-/* =======================================
-   STAR ICONS
-======================================= */
+/* ==========================================
+            STARS
+========================================== */
 
 .stars{
 
-    color:#FFD700;
+    display:flex;
+
+    justify-content:center;
+
+    gap:6px;
+
+    color:#ffc107;
 
     font-size:22px;
 
-    margin-bottom:20px;
+    margin-bottom:28px;
 
 }
 
 
-/* =======================================
-   REVIEW TEXT
-======================================= */
+/* ==========================================
+            REVIEW
+========================================== */
 
 .testimonial-card p{
 
-    color:#555;
+    color:var(--text-light);
 
-    line-height:1.8;
+    font-size:17px;
 
-    margin-bottom:20px;
+    line-height:1.9;
+
+    margin-bottom:28px;
 
 }
 
 
-/* =======================================
-   USER NAME
-======================================= */
+/* ==========================================
+            NAME
+========================================== */
 
 .testimonial-card h3{
 
-    color:#173042;
+    color:var(--text);
+
+    font-size:24px;
 
     margin-bottom:8px;
+
+    font-weight:700;
 
 }
 
 
-/* =======================================
-   USER LOCATION
-======================================= */
+/* ==========================================
+            LOCATION
+========================================== */
 
 .testimonial-card span{
 
-    color:#0f9d9d;
+    color:var(--primary);
+
+    font-weight:600;
+
+    font-size:16px;
+
+}
+
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .testimonials{
+
+        margin:100px auto;
+
+    }
+
+    .testimonials h2{
+
+        font-size:38px;
+
+    }
+
+    .testimonial-subtitle{
+
+        font-size:17px;
+
+        margin-bottom:50px;
+
+    }
 
 }

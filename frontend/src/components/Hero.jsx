@@ -11,20 +11,35 @@ import doctor from "../assets/doctor.png";
 // Import Framer Motion
 import { motion } from "framer-motion";
 
-function Hero() {
-  return (
-    <section className="hero">
+// Import React Router
+import { Link } from "react-router-dom";
 
-      {/* =====================================
-            Floating Background Circles
-      ===================================== */}
+function Hero() {
+
+  const scrollToServices = () => {
+
+    const section = document.getElementById("services");
+
+    if (section) {
+
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+
+    }
+
+  };
+
+  return (
+
+    <section className="hero" id="home">
+
+      {/* Floating Background Circles */}
 
       <div className="circle circle1"></div>
       <div className="circle circle2"></div>
 
-      {/* =====================================
-            LEFT CONTENT
-      ===================================== */}
+      {/* Left Content */}
 
       <motion.div
         className="hero-left"
@@ -33,9 +48,7 @@ function Hero() {
         transition={{ duration: 1 }}
       >
 
-        {/* =====================================
-              AI Badge
-        ===================================== */}
+        {/* AI Badge */}
 
         <motion.div
           className="hero-badge"
@@ -46,9 +59,7 @@ function Hero() {
           🚀 AI Powered Healthcare
         </motion.div>
 
-        {/* =====================================
-              Hero Heading
-        ===================================== */}
+        {/* Heading */}
 
         <motion.h1
           initial={{ opacity: 0, y: -40 }}
@@ -63,9 +74,7 @@ function Hero() {
           Health Assistant
         </motion.h1>
 
-        {/* =====================================
-              Hero Description
-        ===================================== */}
+        {/* Description */}
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -75,15 +84,13 @@ function Hero() {
             delay: 0.5,
           }}
         >
-          Get instant AI-powered healthcare support
-          with symptom analysis, medicine suggestions,
-          and nearby hospital recommendations —
-          all in one smart platform.
+          Get instant AI-powered healthcare support with
+          symptom analysis, medicine suggestions, and
+          nearby hospital recommendations — all in one
+          smart platform.
         </motion.p>
 
-        {/* =====================================
-              Hero Buttons
-        ===================================== */}
+        {/* Buttons */}
 
         <motion.div
           className="hero-buttons"
@@ -95,21 +102,30 @@ function Hero() {
           }}
         >
 
-          <button className="btn-primary">
-            Get Started →
-          </button>
+          <Link to="/login">
 
-          <button className="btn-secondary">
+            <button className="btn-primary">
+
+              Get Started →
+
+            </button>
+
+          </Link>
+
+          <button
+            className="btn-secondary"
+            onClick={scrollToServices}
+          >
+
             Learn More
+
           </button>
 
         </motion.div>
 
       </motion.div>
 
-      {/* =====================================
-            RIGHT IMAGE
-      ===================================== */}
+      {/* Right Image */}
 
       <motion.div
         className="hero-image"
@@ -129,7 +145,9 @@ function Hero() {
       </motion.div>
 
     </section>
+
   );
+
 }
 
 export default Hero;

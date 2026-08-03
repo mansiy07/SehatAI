@@ -1,49 +1,75 @@
-// ============================
-// Components Import
-// ============================
+// ==========================================
+// App Component
+// Purpose:
+// Manage all application routes
+// ==========================================
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Stats from "./components/Stats";
-import HowItWorks from "./components/HowItWorks";
-import Testimonials from "./components/Testimonials";
-import Footer from "./components/Footer";
+// Import React Router
+import { Routes, Route } from "react-router-dom";
+
+// Import Pages
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import NotFound from "./pages/NotFound";
 
 // Global CSS
 import "./App.css";
 
 function App() {
-
   return (
 
-    <>
+    <Routes>
 
-      {/* Navigation Bar */}
-      <Navbar />
+      {/* ==========================
+              Home Page
+      ========================== */}
 
-      {/* Hero Section */}
-      <Hero />
+      <Route
+        path="/"
+        element={<Home />}
+      />
 
-      {/* Features Section */}
-      <Features />
+      {/* ==========================
+              Login Page
+      ========================== */}
 
-      {/* Statistics */}
-      <Stats />
+      <Route
+        path="/login"
+        element={<Login />}
+      />
 
-      {/* How It Works */}
-      <HowItWorks />
+      {/* ==========================
+            Register Page
+      ========================== */}
 
-      {/* User Reviews */}
-      <Testimonials />
+      <Route
+        path="/register"
+        element={<Register />}
+      />
 
-      {/* Footer */}
-      <Footer />
+      {/* ==========================
+            Dashboard Page
+      ========================== */}
 
-    </>
+      <Route
+        path="/dashboard"
+        element={<Dashboard />}
+      />
+
+      {/* ==========================
+            404 Page
+      ========================== */}
+
+      <Route
+        path="*"
+        element={<NotFound />}
+      />
+
+    </Routes>
 
   );
-
 }
 
 export default App;

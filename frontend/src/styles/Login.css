@@ -1,0 +1,329 @@
+/* ==========================================
+            LOGIN PAGE
+========================================== */
+
+.login-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#dff8f6,#f5fffe);
+
+    padding:40px;
+
+}
+
+
+/* ==========================================
+            OVERLAY
+========================================== */
+
+.login-overlay{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/* ==========================================
+            LOGIN CARD
+========================================== */
+
+.login-card{
+
+    width:100%;
+    max-width:450px;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    padding:45px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+}
+
+
+/* ==========================================
+            HEADING
+========================================== */
+
+.login-card h1{
+
+    text-align:center;
+
+    color:#173042;
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.login-card p{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:35px;
+
+    font-size:17px;
+
+}
+
+.login-card p span{
+
+    color:#0f9d9d;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================
+            INPUT BOX
+========================================== */
+
+.input-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:22px;
+
+}
+
+.input-box label{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#173042;
+
+}
+
+.input-box input{
+
+    padding:14px 16px;
+
+    border:2px solid #e5e5e5;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.input-box input:focus{
+
+    outline:none;
+
+    border-color:#0f9d9d;
+
+}
+
+
+/* ==========================================
+          PASSWORD
+========================================== */
+
+.password-box{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.password-box input{
+
+    flex:1;
+
+}
+
+.show-btn{
+
+    border:none;
+
+    background:#0f9d9d;
+
+    color:white;
+
+    padding:0 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.show-btn:hover{
+
+    background:#087d7d;
+
+}
+
+
+/* ==========================================
+            OPTIONS
+========================================== */
+
+.login-options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    font-size:15px;
+
+}
+
+.login-options a{
+
+    text-decoration:none;
+
+    color:#0f9d9d;
+
+    font-weight:600;
+
+}
+
+.login-options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+/* ==========================================
+            BUTTON
+========================================== */
+
+.login-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#0f9d9d;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#087d7d;
+
+    box-shadow:0 15px 30px rgba(15,157,157,.35);
+
+}
+
+
+/* ==========================================
+          REGISTER LINK
+========================================== */
+
+.register-link{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:#555;
+
+}
+
+.register-link a{
+
+    margin-left:8px;
+
+    color:#0f9d9d;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+}
+
+.register-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:600px){
+
+    .login-card{
+
+        padding:30px 25px;
+
+    }
+
+    .login-card h1{
+
+        font-size:30px;
+
+    }
+
+    .login-options{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        align-items:flex-start;
+
+    }
+
+}

@@ -1,12 +1,171 @@
+/* ==========================================
+            GOOGLE FONTS
+========================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap');
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+/* ==========================================
+            CSS VARIABLES
+========================================== */
+
+:root{
+
+    /* Primary Colors */
+
+    --primary:#14b8a6;
+    --primary-dark:#0f766e;
+    --secondary:#38bdf8;
+
+    /* Background */
+
+    --bg:#f5fbfb;
+    --surface:#ffffff;
+
+    /* Text */
+
+    --text:#173042;
+    --text-light:#64748b;
+
+    /* Border */
+
+    --border:#e2e8f0;
+
+    /* Shadow */
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    /* Gradient */
+
+    --gradient:linear-gradient(
+        135deg,
+        #14b8a6,
+        #38bdf8
+    );
+
 }
 
+
+/* ==========================================
+            DARK MODE
+========================================== */
+
+body.dark{
+
+    --primary:#2dd4bf;
+    --primary-dark:#14b8a6;
+    --secondary:#60a5fa;
+
+    --bg:#081b29;
+    --surface:#10273b;
+
+    --text:#ffffff;
+    --text-light:#cbd5e1;
+
+    --border:#1e3a4d;
+
+    --shadow:0 15px 40px rgba(0,0,0,.45);
+
+    --gradient:linear-gradient(
+        135deg,
+        #2dd4bf,
+        #60a5fa
+    );
+
+}
+
+
+/* ==========================================
+            RESET
+========================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ==========================================
+            HTML
+========================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+/* ==========================================
+            BODY
+========================================== */
+
 body{
+
     font-family:'Poppins',sans-serif;
-    background:#f5fbfb;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    transition:
+        background .35s ease,
+        color .35s ease;
+
+}
+
+
+/* ==========================================
+            LINKS
+========================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* ==========================================
+            BUTTON
+========================================== */
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+/* ==========================================
+            IMAGE
+========================================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+/* ==========================================
+            SELECTION
+========================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
 }

@@ -3,24 +3,35 @@
 // =======================================
 
 import "./Navbar.css";
+
 import { useState, useEffect } from "react";
+
+import { Link } from "react-router-dom";
+
+// Theme Icons
+import { FaMoon, FaSun } from "react-icons/fa";
+
+// Theme Context
+import { useTheme } from "../ThemeContext";
 
 function Navbar() {
 
-  // ===============================
-  // Navbar Scroll Effect
-  // ===============================
-
   const [scroll, setScroll] = useState(false);
+
+  const { darkMode, toggleTheme } = useTheme();
 
   useEffect(() => {
 
     const handleScroll = () => {
 
       if (window.scrollY > 50) {
+
         setScroll(true);
+
       } else {
+
         setScroll(false);
+
       }
 
     };
@@ -37,31 +48,64 @@ function Navbar() {
 
       {/* Logo */}
 
-      <div className="logo">
+      <Link to="/" className="logo">
 
         <span>🏥</span>
 
         <h2>SehatAI</h2>
 
-      </div>
+      </Link>
 
-      {/* Navigation Links */}
+      {/* Navigation */}
 
       <ul>
 
-        <li>Home</li>
+        <li>
+          <a href="#home">Home</a>
+        </li>
 
-        <li>Services</li>
+        <li>
+          <a href="#services">Services</a>
+        </li>
 
-        <li>About</li>
+        <li>
+          <a href="#about">About</a>
+        </li>
 
-        <li>Contact</li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
 
       </ul>
 
-      {/* Login Button */}
+      {/* Right Side */}
 
-      <button>Login</button>
+      <div className="nav-actions">
+
+        {/* Theme Toggle */}
+
+        <button
+          className="theme-toggle"
+          onClick={toggleTheme}
+        >
+
+          {darkMode ? <FaSun /> : <FaMoon />}
+
+        </button>
+
+        {/* Login */}
+
+        <Link to="/login">
+
+          <button>
+
+            Login
+
+          </button>
+
+        </Link>
+
+      </div>
 
     </nav>
 
