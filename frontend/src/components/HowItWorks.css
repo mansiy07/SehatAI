@@ -11,11 +11,15 @@
 
     text-align:center;
 
-    background:#0d2233;
+    background:var(--surface);
 
     border-radius:30px;
 
     padding:80px 40px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
 
 }
 
@@ -32,13 +36,7 @@
 
     font-weight:800;
 
-    margin-bottom:70px;
-
-}
-
-body.dark .how h2{
-
-    color:#f8fafc;
+    margin-bottom:55px;
 
 }
 
@@ -74,7 +72,7 @@ body.dark .how h2{
 
     background:var(--surface);
 
-    border:1px solid rgba(20,184,166,.12);
+    border:1px solid var(--border);
 
     padding:40px 25px;
 
@@ -82,7 +80,7 @@ body.dark .how h2{
 
     box-shadow:var(--shadow);
 
-    transition:.35s;
+    transition:all .35s ease;
 
     cursor:pointer;
 
@@ -132,11 +130,11 @@ body.dark .how h2{
 
 .step:hover{
 
-    transform:translateY(-12px);
+    transform:translateY(-10px);
 
-    border-color:rgba(20,184,166,.35);
+    border-color:var(--primary);
 
-    box-shadow:0 25px 50px rgba(20,184,166,.22);
+    box-shadow:0 20px 45px rgba(20,184,166,.18);
 
 }
 
@@ -159,7 +157,7 @@ body.dark .how h2{
 
 .step:hover .step-icon{
 
-    transform:scale(1.15) rotate(8deg);
+    transform:scale(1.15);
 
 }
 
@@ -200,42 +198,11 @@ body.dark .how h2{
 
 .arrow{
 
-    font-size:36px;
+    font-size:38px;
 
     color:var(--primary);
 
     flex-shrink:0;
-
-}
-
-
-/* ==========================================
-            DARK MODE
-========================================== */
-
-body.dark .step{
-
-    background:#173042;
-
-    border:1px solid rgba(255,255,255,.08);
-
-}
-
-body.dark .step h3{
-
-    color:#ffffff;
-
-}
-
-body.dark .step p{
-
-    color:#cbd5e1;
-
-}
-
-body.dark .step:hover{
-
-    box-shadow:0 25px 50px rgba(0,0,0,.45);
 
 }
 

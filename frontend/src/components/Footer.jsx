@@ -7,6 +7,7 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 
 import {
+  FaEnvelope,
   FaFacebook,
   FaInstagram,
   FaLinkedin,
@@ -111,9 +112,25 @@ function Footer() {
 
           <h3>Contact</h3>
 
-          <p>📧 support@sehatai.com</p>
+          <p>
+            📧{" "}
+            <a
+              href="mailto:mansiyadav2807@gmail.com"
+              className="footer-link"
+            >
+              mansiyadav2807@gmail.com
+            </a>
+          </p>
 
-          <p>📞 +91 9876543210</p>
+          <p>
+            📞{" "}
+            <a
+              href="tel:+919876543210"
+              className="footer-link"
+            >
+              +91 9876543210
+            </a>
+          </p>
 
           <p>📍 Greater Noida, India</p>
 
@@ -121,19 +138,62 @@ function Footer() {
 
       </div>
 
-      {/* Social */}
+      {/* Social Icons */}
 
       <div className="social-icons">
 
-        <a href="#"><FaFacebook /></a>
+        {/* Email */}
 
-        <a href="#"><FaInstagram /></a>
+        <a
+          href="mailto:mansiyadav2807@gmail.com"
+          aria-label="Email"
+        >
+          <FaEnvelope />
+        </a>
 
-        <a href="#"><FaLinkedin /></a>
+        {/* Facebook */}
 
-        <a href="#"><FaGithub /></a>
+        <a
+          href="#"
+          aria-label="Facebook"
+        >
+          <FaFacebook />
+        </a>
+
+        {/* Instagram */}
+
+        <a
+          href="#"
+          aria-label="Instagram"
+        >
+          <FaInstagram />
+        </a>
+
+        {/* LinkedIn */}
+
+        <a
+          href="https://www.linkedin.com/in/mansiy07"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin />
+        </a>
+
+        {/* GitHub */}
+
+        <a
+          href="https://github.com/mansiy07"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <FaGithub />
+        </a>
 
       </div>
+
+      {/* Copyright */}
 
       <p className="copyright">
 
