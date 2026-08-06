@@ -1,0 +1,203 @@
+/* ==========================================
+            SIDEBAR
+========================================== */
+
+.sidebar{
+
+    width:260px;
+
+    min-height:100vh;
+
+    background:#10273b;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    padding:30px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    box-shadow:5px 0 20px rgba(0,0,0,.15);
+
+}
+
+
+/* ==========================================
+            LOGO
+========================================== */
+
+.sidebar-logo{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.sidebar-logo h2{
+
+    color:#fff;
+
+    font-size:30px;
+
+}
+
+
+/* ==========================================
+            MENU
+========================================== */
+
+.sidebar-menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    flex:1;
+
+}
+
+.sidebar-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:#dbeafe;
+
+    font-size:17px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.sidebar-menu a svg{
+
+    font-size:20px;
+
+}
+
+.sidebar-menu a:hover{
+
+    background:rgba(255,255,255,.12);
+
+    color:#fff;
+
+}
+
+.sidebar-menu a.active{
+
+    background:var(--gradient);
+
+    color:#fff;
+
+}
+
+
+/* ==========================================
+            LOGOUT
+========================================== */
+
+.logout{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#ef4444;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.logout:hover{
+
+    background:#dc2626;
+
+}
+
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:900px){
+
+    .sidebar{
+
+        width:80px;
+
+        padding:20px 10px;
+
+    }
+
+    .sidebar-logo h2{
+
+        font-size:20px;
+
+    }
+
+    .sidebar-menu span{
+
+        display:none;
+
+    }
+
+    .sidebar-menu a{
+
+        justify-content:center;
+
+    }
+
+    .logout{
+
+        font-size:0;
+
+    }
+
+    .logout svg{
+
+        font-size:20px;
+
+    }
+
+}

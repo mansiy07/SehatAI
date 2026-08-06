@@ -163,14 +163,16 @@
 
 
 /* ==========================================
-          PASSWORD
+            PASSWORD
 ========================================== */
 
 .password-box{
 
     display:flex;
 
-    gap:10px;
+    align-items:center;
+
+    gap:12px;
 
 }
 
@@ -182,25 +184,41 @@
 
 .show-btn{
 
+    min-width:90px;
+
+    height:52px;
+
     border:none;
 
-    background:var(--primary);
+    border-radius:12px;
 
-    color:white;
+    background:var(--gradient);
 
-    padding:0 18px;
+    color:#fff;
 
-    border-radius:10px;
+    font-size:16px;
+
+    font-weight:600;
 
     cursor:pointer;
 
-    transition:.3s;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.35s;
+
+    flex-shrink:0;
 
 }
 
 .show-btn:hover{
 
-    background:var(--primary-dark);
+    transform:scale(1.05);
+
+    box-shadow:0 10px 20px rgba(20,184,166,.25);
 
 }
 
@@ -223,6 +241,18 @@
 
 }
 
+.login-options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--text);
+
+}
+
 .login-options a{
 
     text-decoration:none;
@@ -233,15 +263,9 @@
 
 }
 
-.login-options label{
+.login-options a:hover{
 
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    color:var(--text);
+    text-decoration:underline;
 
 }
 
@@ -322,6 +346,12 @@
 
 @media(max-width:600px){
 
+    .login-page{
+
+        padding:20px;
+
+    }
+
     .login-card{
 
         padding:30px 25px;
@@ -331,6 +361,20 @@
     .login-card h1{
 
         font-size:30px;
+
+    }
+
+    .password-box{
+
+        flex-direction:column;
+
+    }
+
+    .show-btn{
+
+        width:100%;
+
+        height:50px;
 
     }
 

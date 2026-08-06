@@ -1,0 +1,219 @@
+/* ==========================================
+            CHAT SIDEBAR
+========================================== */
+
+.chat-sidebar{
+
+    width:290px;
+
+    background:var(--surface);
+
+    border-right:1px solid var(--border);
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:24px;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+            NEW CHAT
+========================================== */
+
+.new-chat{
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:16px;
+
+    background:var(--gradient);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin-bottom:30px;
+
+}
+
+.new-chat:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 20px rgba(20,184,166,.30);
+
+}
+
+
+/* ==========================================
+            TITLE
+========================================== */
+
+.chat-sidebar h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--text);
+
+    font-size:18px;
+
+    margin-bottom:20px;
+
+}
+
+
+/* ==========================================
+            CHAT HISTORY
+========================================== */
+
+.chat-history{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding-right:6px;
+
+}
+
+.chat-history::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.chat-history::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:10px;
+
+}
+
+.history-item{
+
+    padding:14px 16px;
+
+    border-radius:14px;
+
+    margin-bottom:12px;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    border:1px solid transparent;
+
+}
+
+.history-item:hover{
+
+    background:rgba(20,184,166,.12);
+
+    border-color:var(--primary);
+
+    transform:translateX(5px);
+
+}
+
+/* Active Chat */
+
+.history-item.active{
+
+    background:var(--gradient);
+
+    color:white;
+
+}
+
+
+/* ==========================================
+            CLEAR CHAT
+========================================== */
+
+.clear-chat{
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:16px;
+
+    background:#ef4444;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin-top:20px;
+
+}
+
+.clear-chat:hover{
+
+    background:#dc2626;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:992px){
+
+    .chat-sidebar{
+
+        display:none;
+
+    }
+
+}

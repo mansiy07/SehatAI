@@ -1,0 +1,89 @@
+/* ==========================================
+            AI ASSISTANT
+========================================== */
+
+.ai-page{
+
+    display:flex;
+
+    height:calc(100vh - 80px);
+
+    background:var(--surface);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+.chat-container{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:var(--bg);
+
+}
+
+
+/* ==========================================
+            MESSAGES
+========================================== */
+
+.messages{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:20px;
+
+    scroll-behavior:smooth;
+
+}
+
+.messages::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.messages::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:992px){
+
+    .ai-page{
+
+        flex-direction:column;
+
+        height:auto;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .messages{
+
+        padding:15px;
+
+    }
+
+}

@@ -7,6 +7,11 @@ import "./../styles/Login.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
+import {
+  FaEye,
+  FaEyeSlash
+} from "react-icons/fa";
+
 function Login() {
 
   const [showPassword, setShowPassword] = useState(false);
@@ -15,11 +20,7 @@ function Login() {
 
     <div className="login-page">
 
-      {/* Background */}
-
       <div className="login-overlay">
-
-        {/* Login Card */}
 
         <div className="login-card">
 
@@ -28,8 +29,11 @@ function Login() {
           <h1>Welcome Back 👋</h1>
 
           <p>
+
             Login to continue using
+
             <span> SehatAI</span>
+
           </p>
 
           {/* Login Form */}
@@ -43,8 +47,11 @@ function Login() {
               <label>Email</label>
 
               <input
+
                 type="email"
+
                 placeholder="Enter your email"
+
               />
 
             </div>
@@ -58,19 +65,40 @@ function Login() {
               <div className="password-box">
 
                 <input
+
                   type={showPassword ? "text" : "password"}
+
                   placeholder="Enter your password"
+
                 />
 
                 <button
+
                   type="button"
+
                   className="show-btn"
+
                   onClick={() =>
+
                     setShowPassword(!showPassword)
+
                   }
+
                 >
 
-                  {showPassword ? "Hide" : "Show"}
+                  {
+
+                    showPassword
+
+                      ?
+
+                      <FaEyeSlash />
+
+                      :
+
+                      <FaEye />
+
+                  }
 
                 </button>
 
@@ -91,16 +119,21 @@ function Login() {
               </label>
 
               <a href="#">
+
                 Forgot Password?
+
               </a>
 
             </div>
 
-            {/* Button */}
+            {/* Login Button */}
 
             <button
+
               type="submit"
+
               className="login-btn"
+
             >
 
               Login

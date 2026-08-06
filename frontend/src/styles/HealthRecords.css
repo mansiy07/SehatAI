@@ -1,0 +1,159 @@
+.records-page{
+
+    min-height:100vh;
+
+    background:var(--bg);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.records-card{
+
+    width:100%;
+
+    max-width:900px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.records-icon{
+
+    display:block;
+
+    margin:auto;
+
+    font-size:60px;
+
+    color:var(--primary);
+
+}
+
+.records-card h1{
+
+    text-align:center;
+
+    margin:20px 0 10px;
+
+    color:var(--text);
+
+}
+
+.records-card>p{
+
+    text-align:center;
+
+    color:var(--text-light);
+
+    margin-bottom:35px;
+
+}
+
+.upload-box{
+
+    border:2px dashed var(--primary);
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.upload-box svg{
+
+    font-size:50px;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.upload-box button{
+
+    margin-top:20px;
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--gradient);
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.record-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    margin-top:20px;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+}
+
+.record-item h3{
+
+    color:var(--text);
+
+}
+
+.record-item span{
+
+    color:var(--text-light);
+
+}
+
+.record-item button{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--gradient);
+
+    color:white;
+
+    cursor:pointer;
+
+}

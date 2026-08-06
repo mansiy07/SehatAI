@@ -1,0 +1,186 @@
+/* ==========================================
+            CHAT MESSAGE
+========================================== */
+
+.message{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    margin:22px;
+
+}
+
+.message.user{
+
+    justify-content:flex-end;
+
+}
+
+.message-avatar{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+
+/* ==========================================
+            MESSAGE CONTENT
+========================================== */
+
+.message-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    max-width:65%;
+
+}
+
+.message.user .message-content{
+
+    align-items:flex-end;
+
+}
+
+.message.ai .message-content{
+
+    align-items:flex-start;
+
+}
+
+
+/* ==========================================
+            MESSAGE BUBBLE
+========================================== */
+
+.message-bubble{
+
+    padding:18px 20px;
+
+    border-radius:18px;
+
+    border:1px solid var(--border);
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    line-height:1.8;
+
+    word-break:break-word;
+
+    box-shadow:var(--shadow);
+
+}
+
+.message.user .message-bubble{
+
+    background:var(--gradient);
+
+    color:white;
+
+}
+
+
+/* ==========================================
+            FOOTER
+========================================== */
+
+.message-footer{
+
+    width:100%;
+
+    margin-top:8px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:var(--text-light);
+
+    font-size:13px;
+
+}
+
+.message.user .message-footer{
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+}
+
+
+/* ==========================================
+            ACTIONS
+========================================== */
+
+.message-actions{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.message-actions svg{
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.message-actions svg:hover{
+
+    color:var(--primary);
+
+    transform:scale(1.15);
+
+}
+
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .message-content{
+
+        max-width:85%;
+
+    }
+
+    .message{
+
+        margin:15px;
+
+    }
+
+}

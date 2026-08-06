@@ -4,52 +4,68 @@
 
 import "./../styles/Dashboard.css";
 
+import { useNavigate } from "react-router-dom";
+
 import {
+  FaRobot,
   FaHeartbeat,
   FaHospital,
-  FaPills,
+  FaBookMedical,
   FaFileMedical,
-  FaUserCircle,
+  FaClipboardList,
   FaSignOutAlt
 } from "react-icons/fa";
 
 function Dashboard() {
 
+  const navigate = useNavigate();
+
   return (
 
-    <div className="dashboard">
+    <main className="dashboard-content">
 
-      {/* Header */}
+      {/* Page Title */}
 
-      <header className="dashboard-header">
+      <h2 className="dashboard-title">
 
-        <h2>🏥 SehatAI Dashboard</h2>
+        🏥 SehatAI Dashboard
 
-        <div className="user-box">
-
-          <FaUserCircle />
-
-          <span>Welcome, User</span>
-
-        </div>
-
-      </header>
+      </h2>
 
       {/* Cards */}
 
       <div className="dashboard-grid">
 
-        <div className="dashboard-card">
+        <div
+          className="dashboard-card"
+          onClick={() => navigate("/ai")}
+        >
+
+          <FaRobot className="card-icon"/>
+
+          <h3>AI Assistant</h3>
+
+          <p>Chat with SehatAI powered AI Assistant.</p>
+
+        </div>
+
+        <div
+          className="dashboard-card"
+          onClick={() => navigate("/symptom")}
+        >
 
           <FaHeartbeat className="card-icon"/>
 
-          <h3>AI Symptom Checker</h3>
+          <h3>Symptom Checker</h3>
 
           <p>Analyze symptoms instantly using AI.</p>
 
         </div>
 
-        <div className="dashboard-card">
+        <div
+          className="dashboard-card"
+          onClick={() => navigate("/hospitals")}
+        >
 
           <FaHospital className="card-icon"/>
 
@@ -59,29 +75,48 @@ function Dashboard() {
 
         </div>
 
-        <div className="dashboard-card">
+        <div
+          className="dashboard-card"
+          onClick={() => navigate("/learn")}
+        >
 
-          <FaPills className="card-icon"/>
+          <FaBookMedical className="card-icon"/>
 
-          <h3>Medicines</h3>
+          <h3>Health Education</h3>
 
-          <p>View medicine suggestions.</p>
+          <p>Learn diseases, tips and healthcare.</p>
 
         </div>
 
-        <div className="dashboard-card">
+        <div
+          className="dashboard-card"
+          onClick={() => navigate("/records")}
+        >
 
           <FaFileMedical className="card-icon"/>
 
           <h3>Health Records</h3>
 
-          <p>Access your saved reports.</p>
+          <p>Access all your saved reports.</p>
+
+        </div>
+
+        <div
+          className="dashboard-card"
+          onClick={() => navigate("/quiz")}
+        >
+
+          <FaClipboardList className="card-icon"/>
+
+          <h3>Health Quiz</h3>
+
+          <p>Improve your health knowledge.</p>
 
         </div>
 
       </div>
 
-      {/* Recent Activity */}
+      {/* Activity */}
 
       <div className="activity">
 
@@ -101,7 +136,7 @@ function Dashboard() {
 
       </button>
 
-    </div>
+    </main>
 
   );
 

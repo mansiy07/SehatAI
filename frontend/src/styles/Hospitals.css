@@ -1,0 +1,364 @@
+/* ==========================================
+            HOSPITAL PAGE
+========================================== */
+
+.hospital-page{
+
+    min-height:100vh;
+
+    background:var(--bg);
+
+    padding:40px;
+
+}
+
+
+/* ==========================================
+            HEADER
+========================================== */
+
+.hospital-header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.hospital-icon{
+
+    font-size:65px;
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+.hospital-header h1{
+
+    color:var(--text);
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+}
+
+.hospital-header p{
+
+    color:var(--text-light);
+
+}
+
+
+/* ==========================================
+            SEARCH
+========================================== */
+
+.hospital-search{
+
+    display:flex;
+
+    gap:18px;
+
+    margin:35px auto;
+
+    max-width:850px;
+
+}
+
+.hospital-search input{
+
+    flex:1;
+
+    padding:16px;
+
+    border:2px solid var(--border);
+
+    border-radius:14px;
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.hospital-search input:focus{
+
+    border-color:var(--primary);
+
+}
+
+.hospital-search button{
+
+    padding:16px 28px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--gradient);
+
+    color:white;
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.hospital-search button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ==========================================
+            EMERGENCY BOX
+========================================== */
+
+.emergency-box{
+
+    max-width:850px;
+
+    margin:0 auto 35px;
+
+    background:#ef4444;
+
+    color:white;
+
+    padding:20px 25px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.emergency-box svg{
+
+    font-size:45px;
+
+}
+
+.emergency-box h3{
+
+    margin-bottom:6px;
+
+}
+
+
+/* ==========================================
+            GRID
+========================================== */
+
+.hospital-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:25px;
+
+}
+
+
+/* ==========================================
+            CARD
+========================================== */
+
+.hospital-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.hospital-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.hospital-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:20px;
+
+}
+
+.hospital-logo{
+
+    font-size:40px;
+
+    color:var(--primary);
+
+}
+
+.hospital-top h2{
+
+    color:var(--text);
+
+    font-size:24px;
+
+    margin-bottom:5px;
+
+}
+
+.rating{
+
+    color:#fbbf24;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+}
+
+.hospital-card p{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--text-light);
+
+    margin:12px 0;
+
+}
+
+
+/* ==========================================
+            BUTTONS
+========================================== */
+
+.hospital-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:22px;
+
+}
+
+.call-btn,
+
+.direction-btn{
+
+    flex:1;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.call-btn{
+
+    background:#16a34a;
+
+}
+
+.direction-btn{
+
+    background:var(--gradient);
+
+}
+
+.call-btn:hover,
+
+.direction-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .hospital-search{
+
+        flex-direction:column;
+
+    }
+
+    .hospital-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .emergency-box{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .hospital-header h1{
+
+        font-size:32px;
+
+    }
+
+}
